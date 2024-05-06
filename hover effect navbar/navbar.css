@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'monsterrat',sans-serif;
+}
+.nav
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	overflow: hidden;
+}
+.nav ul
+{
+	position: relative;
+}
+.nav ul li
+{
+	text-align: center;
+	list-style: none;
+
+}
+.nav ul li a
+{
+	color:#333;
+	text-decoration: none;
+	font-size: 3em;
+	padding: 5px 20px;
+	display: inline-flex;
+	font-weight: 700;
+	transition: .5s;
+}
+.nav ul:hover li a
+{
+color: #0002;	
+}
+.nav ul li:hover a
+{
+	color: #000;
+	background:#fff ;
+}
+.nav ul li a::before
+{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	transform:translate(-50%,-50%) ;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4em;
+	color:rgba(0,0,0,.1);
+	border-radius: 50%;
+	z-index: -1;
+	opacity: 0;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 500px;
+	transition: letter-spacing .5s,left .5s;
+}
+.nav ul li a:hover::before
+{
+	content: attr(data-text);
+	opacity: 1;
+	left: 50%;
+	letter-spacing: 10px;
+	height: 1800px;
+	width: 1800px;
+
+
+}
+.nav ul li:nth-child(6n+1) a::before
+{
+background:#81ecec;
+}
+.nav ul li:nth-child(6n+2) a::before
+{
+background:#ff7675;
+}
+.nav ul li:nth-child(6n+3) a::before
+{
+background:#55efc4;
+}
+.nav ul li:nth-child(6n+4) a::before
+{
+background:#a29bfe;
+}
+.nav ul li:nth-child(6n+5) a::before
+{
+background:#fd79a8;
+}
